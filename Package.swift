@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "WebimMobileWidget",
-    defaultLocalization: "en",
+    defaultLocalization: "ru",
     platforms: [
         .iOS(.v13)
     ],

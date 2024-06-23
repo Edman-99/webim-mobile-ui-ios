@@ -39,7 +39,7 @@ class ScrollButtonView: UIView {
     }
 
     func setScrollButtonBackgroundImage(_ image: UIImage?, state: UIControl.State) {
-        scrollButton.setBackgroundImage(image, for: state)
+        scrollButton.setImage(image, for: state)
     }
 
     func add(tapGesture: UITapGestureRecognizer) {
@@ -47,6 +47,7 @@ class ScrollButtonView: UIView {
     }
 
     func setScrollButtonViewState(_ state: ScrollButtonViewState) {
+        
         switch state {
         case .hidden:
             isHidden = true

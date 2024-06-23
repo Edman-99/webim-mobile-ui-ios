@@ -95,7 +95,7 @@ class WMDownloadFileManager {
     func imageForUrl(_ url: URL) -> UIImage? {
 
         let request = ImageRequest(url: url)
-        if let image = ImageCache.shared[ImageCacheKey(request: request)] {
+        if let image = ImageCache.shared[ImageCacheKey(key: "request")] {
             return image.image
 
         } else {
@@ -120,7 +120,7 @@ class WMDownloadFileManager {
                         container.getValue()?.updateImageDownloadProgress(
                             url: url,
                             progress: 1,
-                            image: ImageCache.shared[ImageCacheKey(request: request)]?.image
+                            image: ImageCache.shared[ImageCacheKey(key: "request")]?.image
                         )
                     }
                 }

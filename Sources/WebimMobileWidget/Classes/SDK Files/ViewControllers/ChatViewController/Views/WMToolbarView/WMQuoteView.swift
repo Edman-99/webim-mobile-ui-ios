@@ -138,7 +138,7 @@ class WMQuoteView: UIView, URLSessionDelegate {
         }
         self.quoteImageView.accessibilityIdentifier = url.absoluteString
         let request = ImageRequest(url: url)
-        if let imageContainer = ImageCache.shared[ImageCacheKey(request: request)] {
+        if let imageContainer = ImageCache.shared[ImageCacheKey(key: "request")] {
             self.quoteImageView.image = imageContainer.image
         } else {
             WMFileDownloadManager.shared.subscribeForImage(url: url, progressListener: self)

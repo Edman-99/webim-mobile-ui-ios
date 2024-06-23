@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "cosmos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
+      "state" : {
+        "revision" : "40ba10aaf175bf50abefd0e518bd3b40862af3b1",
+        "version" : "25.0.1"
+      }
+    },
+    {
+      "identity" : "flanimatedimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flipboard/FLAnimatedImage.git",
+      "state" : {
+        "revision" : "d4f07b6f164d53c1212c3e54d6460738b1981e9f",
+        "version" : "1.0.17"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "084076db4f9b9ee4db51177ef5a4879689c1aa09",
+        "version" : "12.7.2"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "state" : {
+        "revision" : "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+        "version" : "0.15.3"
+      }
+    },
+    {
+      "identity" : "webim-client-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/webim/webim-client-sdk-ios.git",
+      "state" : {
+        "revision" : "b936b727491a4a94adc6f6389747f85503477c55",
+        "version" : "3.41.6"
+      }
+    },
+    {
+      "identity" : "webim-mobile-keyboard-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/webim/webim-mobile-keyboard-ios.git",
+      "state" : {
+        "revision" : "844bc530a24cee02dae82dda5ba29b1be12eb8cb",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

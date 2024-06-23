@@ -141,11 +141,12 @@ final class WebimService {
     func startSession() {
         do {
             try webimSession?.resume()
+            self.startChat(message: "Здравствуйте")
         } catch {
             self.printError(error: error, message: "Webim session starting/resuming")
         }
         
-        startChat()
+        
     }
     
     func stopSession() {

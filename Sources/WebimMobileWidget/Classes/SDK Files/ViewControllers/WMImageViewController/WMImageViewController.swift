@@ -113,7 +113,7 @@ class WMImageViewController: UIViewController {
             let url = selectedImageURL else { return }
         let request = ImageRequest(url: url)
 
-        if let image = ImageCache.shared[ImageCacheKey(request: request)] {
+        if let image = ImageCache.shared[ImageCacheKey(key: "request")] {
             self.selectedImage = image
             DispatchQueue.main.async {
                 self.imageView.image = image.image
@@ -141,8 +141,8 @@ class WMImageViewController: UIViewController {
                     },
                     completion: { _ in
                         DispatchQueue.main.async {
-                            self.selectedImage = ImageCache.shared[ImageCacheKey(request: request)]
-                            self.imageView.image = ImageCache.shared[ImageCacheKey(request: request)]?.image
+                            self.selectedImage = ImageCache.shared[ImageCacheKey(key: "request")]
+                            self.imageView.image = ImageCache.shared[ImageCacheKey(key: "request")]?.image
                             self.imageDownloadIndicator.isHidden = true
                         }
                     }

@@ -166,8 +166,8 @@ class WMMessageTableCell: UITableViewCell, UITextViewDelegate {
         
         self.sendStatus?.isHidden = !sendStatus
         if readStatus {
-            self.sendStatus?.image = .loadImageFromWidget(named: "ReadByOperator")
-        } else {
+            self.sendStatus?.image = .loadImageFromWidget(named: "ReadByOperator")?.colour(#colorLiteral(red: 0.568627451, green: 0.2156862745, blue: 0.9647058824, alpha: 1))
+        } else { 
             self.sendStatus?.image = .loadImageFromWidget(named: "Sent")
         }
     }

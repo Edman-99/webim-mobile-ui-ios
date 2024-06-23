@@ -82,8 +82,8 @@ extension ChatViewController {
     func setupNavigationBar() {
         navigationBarUpdater.set(navigationController: navigationController)
         navigationBarUpdater.set(delegate: self)
-        setupTitleView()
-        setupRightBarButtonItem()
+//        setupTitleView()
+//        setupRightBarButtonItem()
     }
 
     func configureKeyboardNotificationManager() {

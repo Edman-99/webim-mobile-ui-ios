@@ -74,7 +74,7 @@ class WMFileDownloadManager: NSObject {
     func subscribeForImage(url: URL, progressListener: WMFileDownloadProgressListener) {
         WidgetAppDelegate.shared.checkMainThread()
         let request = ImageRequest(url: url)
-        if let imageContainer = ImageCache.shared[ImageCacheKey(request: request)] {
+        if let imageContainer = ImageCache.shared[ImageCacheKey(key: "request")] {
             progressListener.progressChanged(url: url, progress: 1, image: imageContainer, error: nil)
         } else {
             self.addProgressListener(url: url, listener: progressListener)
@@ -96,9 +96,9 @@ class WMFileDownloadManager: NSObject {
                     WidgetAppDelegate.shared.checkMainThread()
                     do {
                         let _ = try result.get()
-                        self.sendProgressChangedEventFor(url: url, progress: 1, image: ImageCache.shared[ImageCacheKey(request: request)], error: nil)
+                        self.sendProgressChangedEventFor(url: url, progress: 1, image: ImageCache.shared[ImageCacheKey(key: "request")], error: nil)
                     } catch {
-                        self.sendProgressChangedEventFor(url: url, progress: 0, image: ImageCache.shared[ImageCacheKey(request: request)], error: error)
+                        self.sendProgressChangedEventFor(url: url, progress: 0, image: ImageCache.shared[ImageCacheKey(key: "request")], error: error)
                     }
                 }
             )
